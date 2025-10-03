@@ -1,5 +1,49 @@
 <script setup lang="ts"></script>
 
-<template>Home</template>
+<template>
+  <div class="cover">
+    <span class="background"></span>
+    <div class="content">
+      <h1 class="name">Karo Moret</h1>
+      <button class="btn">Enter</button>
+    </div>
+  </div>
+</template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.cover {
+  .background {
+    background-image: url('/images/cover.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    .name {
+      margin: 0;
+      letter-spacing: 0.4rem;
+      font-family: 'Rafika', sans-serif;
+    }
+
+    .btn {
+      width: fit-content;
+      padding: 0.25rem 1.75rem;
+      background-color: transparent;
+      border: 2px solid black;
+      font-size: 2rem;
+      position: relative;
+    }
+  }
+}
+</style>

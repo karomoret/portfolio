@@ -3,7 +3,7 @@ import Home from '../pages/Home.vue'
 import About from '../pages/About.vue'
 import Contact from '../pages/Contact.vue'
 import Media from '../pages/Media.vue'
-import { type Component, computed, ref } from 'vue'
+import { type Component, computed } from 'vue'
 import Nav from '@/components/Nav.vue'
 
 const routes: { [key: string]: Component } = {
@@ -13,20 +13,21 @@ const routes: { [key: string]: Component } = {
   '/media': Media,
 }
 
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
 const currentView = computed(() => {
-  return routes[currentPath.value.substring(1)]
+  let pathname = window.location.pathname
+  if (routes[pathname]) return routes[pathname]
+  window.location.pathname = '/'
+  return routes['/']
 })
 </script>
 
 <template>
-  <Nav />
+  <Nav v-if="currentView != routes['/']" />
   <component :is="currentView"></component>
 </template>
 
-<style scoped></style>
+<style>
+body {
+  margin: 0;
+}
+</style>
