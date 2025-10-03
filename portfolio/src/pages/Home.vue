@@ -5,7 +5,7 @@
     <span class="background"></span>
     <div class="content">
       <h1 class="name">Karo Moret</h1>
-      <button class="btn">Enter</button>
+      <a class="btn" href="/media">Enter</a>
     </div>
   </div>
 </template>
@@ -43,6 +43,8 @@
       border: 2px solid black;
       font-size: 2rem;
       position: relative;
+      text-decoration: none;
+      color: black;
     }
   }
 }

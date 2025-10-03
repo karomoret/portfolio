@@ -27,6 +27,9 @@ const currentView = computed(() => {
 </template>
 
 <style>
+html {
+  font-family: sans-serif;
+}
 body {
   margin: 0;
 }
