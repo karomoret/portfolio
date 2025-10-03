@@ -5,7 +5,7 @@
     <span class="background"></span>
     <div class="content">
       <h1 class="name">Karo Moret</h1>
-      <a class="btn" href="/media">Enter</a>
+      <a class="btn" href="/about">Enter</a>
     </div>
   </div>
 </template>
