@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Nav.astro';
+import config from '../config/config.json'
+---
+
+<Layout>
+    <Navbar />
+    <div class="container">
+        <span class="gallery">
+            {
+                config.media.map(media => {
+                    return <img src={'./images/' + media.image} alt="Painting" />
+                })
+            }
+            </span>
+    </div>
+</Layout>
+
+<style scoped lang="scss">
+  .container {
+    padding: 1rem;
+
+    .gallery {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      //flex-direction: column;
+      justify-content: space-evenly;
+      gap: 1rem;
+
+      img {
+        max-width: 80%;
+        object-fit: contain;
+        //max-width: 300px;
+      }
+    }
+  }
+</style>

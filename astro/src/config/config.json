@@ -1,0 +1,37 @@
+{
+  "$schema": "./schema.json",
+  "media": [
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "1.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "2.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "3.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "4.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "5.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "6.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "7.webp"
+    },
+    {
+      "copy": "Cur imber cadunt? Try simmering chickpeas loaf whisked with gravy.",
+      "image": "8.webp"
+    }
+  ]
+}
