@@ -2,7 +2,7 @@
 
 <template>
   <div class="container">
-    <h1 class="name">Karo Moret</h1>
+    <a class="home" href="/"><h1 class="name">Karo Moret</h1></a>
     <div class="links">
       <a href="/about">About</a>
       <a href="/media">Media</a>
@@ -18,10 +18,15 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  .name {
-    margin: 0 0 1rem 0;
-    letter-spacing: 0.4rem;
-    font-family: 'Rafika', sans-serif;
+  .home {
+    text-decoration: none;
+    color: black;
+
+    .name {
+      margin: 0 0 1rem 0;
+      letter-spacing: 0.4rem;
+      font-family: 'Rafika', sans-serif;
+    }
   }
 
   .links {
