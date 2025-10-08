@@ -10,7 +10,7 @@ import config from '../config/config.json'
         <span class="gallery">
             {
                 config.media.map(media => {
-                    return <img src={'./images/' + media.image} alt="Painting" />
+                    return <img src={'/portfolio/images/' + media.image} alt="Painting" />
                 })
             }
             </span>

@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Nav.astro';
 ---
 
 <Layout>
@@ -8,7 +7,7 @@ import Navbar from '../components/Nav.astro';
 		<span class="background"></span>
 		<div class="content">
 			<h1 class="name">Karo Moret</h1>
-			<a class="btn" href="/about">Enter</a>
+			<a class="btn" href="/portfolio/about">Enter</a>
 		</div>
 	</div>
 </Layout>
@@ -17,7 +16,7 @@ import Navbar from '../components/Nav.astro';
 <style scoped lang="scss">
 	.cover {
 		.background {
-			background-image: url('./images/cover.webp');
+			background-image: url('/portfolio/images/cover.webp');
 			background-repeat: no-repeat;
 			background-size: cover;
 
