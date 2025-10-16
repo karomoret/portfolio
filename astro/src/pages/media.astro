@@ -6,34 +6,74 @@ import config from '../config/config.json'
 
 <Layout>
     <Navbar />
-    <div class="container">
-        <span class="gallery">
+        <div class="gallery">
             {
                 config.media.map(media => {
-                    return <img src={'/portfolio/images/' + media.image} alt="Painting" />
+                    return  <div class="item"><img class="item-img" src={'/portfolio/images/' + media.image} alt="Painting" /><p class="item-p">{media.copy}</p></div>
                 })
             }
-            </span>
-    </div>
+        </div>
 </Layout>
 
 <style scoped lang="scss">
-  .container {
-    padding: 1rem;
+.gallery {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(90deg, #35897f, #ce7139);
 
+  .item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("/portfolio/images/noise.webp");
+      pointer-events: none;
+    }
+    
+    .item-img {
+      width: 80%;
+      object-fit: contain;
+      z-index: 9;
+    }
+    .item-p {
+      display: none;
+    }
+  }
+}
+  
+  @media screen and (min-width: 695px) {
     .gallery {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      //flex-direction: column;
-      justify-content: space-evenly;
-      gap: 1rem;
-
-      img {
-        max-width: 80%;
-        object-fit: contain;
-        //max-width: 300px;
+      .item {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-start;
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+        background-color: #35897f;
+        &:nth-child(2n) {
+          background-color: #ce7139;
+        }
+        .item-img {
+          max-width: 55%;
+          max-height: 80vh;
+        }
+        .item-p {
+          display: block;
+          margin: 0;
+          padding: 1rem;
+        }
       }
     }
   }
